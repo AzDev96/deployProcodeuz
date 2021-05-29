@@ -1,0 +1,57 @@
+
+<%- include("./partials/navbar.ejs") %> 
+<section class="porfolio">
+        <h2 class="porfolio__title">Портфолио</h2>
+        <div class="porfolio__container padding__all">
+            <h2 class="porfolio__container-title">Сайты</h2>
+            <div class="porfolio__row">
+                <% sayts.forEach(data => { %>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="porfolio__box">
+                            <img class="porfolio__img" src="<%= data.cover_img %>" alt="png">
+                            <div class="porfolio__absolute">
+                                <h3 class="porfolio__absolute-title"><%= data.title %></h3>
+                                <p class="porfolio__absolute-text"><%= data.text %></p>
+                                <a href="<%= data.silka %>" class="porfolio__absolute-link">Посмотреть</a>
+                            </div>
+                        </div>
+                    </div>
+                <% });  %>
+            </div>
+        </div>
+        <div class="porfolio__container padding__all">
+            <h2 class="porfolio__container-title">Брендбук</h2>
+            <div class="porfolio__row">
+                <% brends.forEach(data => { %>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="porfolio__box">
+                            <img class="porfolio__img" src="<%= data.cover_img %>" alt="png">
+                            <div class="porfolio__absolute">
+                                <h3 class="porfolio__absolute-title"><%= data.title %></h3>
+                                <p class="porfolio__absolute-text"><%= data.text %></p>
+                                <a href="<%= data.silka %>" class="porfolio__absolute-link">Посмотреть</a>
+                            </div>
+                        </div>
+                    </div>
+                <% });  %>
+            </div>
+        </div>
+        <div class="porfolio__container padding__all">
+            <h2 class="porfolio__container-title">Лого</h2>
+            <div class="porfolio__row">
+                <% logos.forEach(data => { %>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="porfolio__box">
+                            <img class="porfolio__img" src="<%= data.cover_img %>" alt="png">
+                            <div class="porfolio__absolute">
+                                <h3 class="porfolio__absolute-title"><%= data.title %></h3>
+                                <p class="porfolio__absolute-text"><%= data.text %></p>
+                                <a href="<%= data.silka %>" class="porfolio__absolute-link">Посмотреть</a>
+                            </div>
+                        </div>
+                    </div>
+                <% });  %>
+            </div>
+        </div>
+</section>
+<%- include("./partials/footer.ejs") %> 

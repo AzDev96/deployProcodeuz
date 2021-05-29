@@ -1,0 +1,223 @@
+<%-  include('./partials/header.ejs') %> 
+<style>
+    .card-title{
+        color: white;
+        font-weight: 700;
+    }
+    #frm-add-PortfolioLogo label.error{
+      background: red;
+      color: white;
+      margin-top: 10px;
+    }
+    #frm-add-PortfolioSayt label.error{
+      background: red;
+      color: white;
+      margin-top: 10px;
+    }
+    #frm-add-PortfolioBrend label.error{
+      background: red;
+      color: white;
+      margin-top: 10px;
+    }
+</style>
+
+  <!--  ==========   Портфолио Сайта  ========== -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Добавить портфолио Сайта</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-md-12">
+          <!-- general form elements disabled -->
+          <div class="card card-secondary">
+            <div class="card-header">
+              <h3 class="card-title">Портфолио Сайта</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <form method="post" action="/admin/PortfolioSayt-add" enctype="multipart/form-data" id="frm-add-PortfolioSayt">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <!-- text input -->
+                    <div class="form-group">
+                      <label>Название</label>
+                      <input required type="text" class="form-control" placeholder="Название сайта" name="title">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <!-- text input -->
+                    <div class="form-group">
+                      <label>Описание - текст</label>
+                      <input required type="text" class="form-control" placeholder="Описание сайта" name="text">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Добавит картинку</label>
+                      <input required type="file" name="cover_image" class="form-control">  
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4">
+                      <div class="form-group">
+                        <label>Сылка на проект</label>
+                        <input type="text" required name="silka" class="form-control" placeholder="Ведите сылку">  
+                      </div>
+                  </div>
+                </div>
+                <button class="btn btn-dark" type="submit">Отправить</button>
+              </form>
+  
+            </div>
+            <!-- /.card-body -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+
+   <!-- ==========  Портфолио Брендбука  ========== -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Добавить портфолио Брендбука</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-md-12">
+          <!-- general form elements disabled -->
+          <div class="card card-orange">
+            <div class="card-header">
+              <h3 class="card-title">Портфолио Брендбука</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <form method="post" action="/admin/portfolioBrend-add" enctype="multipart/form-data" id="frm-add-PortfolioBrend">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <!-- text input -->
+                    <div class="form-group">
+                      <label>Название</label>
+                      <input required type="text" class="form-control" placeholder="Название сайта" name="title">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <!-- text input -->
+                    <div class="form-group">
+                      <label>Описание - текст</label>
+                      <input required type="text" class="form-control" placeholder="Описание сайта" name="text">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Добавит картинку</label>
+                      <input required type="file" name="cover_image" class="form-control">  
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4">
+                      <div class="form-group">
+                        <label>Сылка на проект</label>
+                        <input type="text" required name="silka" class="form-control" placeholder="Ведите сылку">  
+                      </div>
+                  </div>
+                </div>
+                <button class="btn btn-dark" type="submit">Отправить</button>
+              </form>
+  
+            </div>
+            <!-- /.card-body -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+
+  <!--  ==========   Портфолио Лого  ========== -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Добавить портфолио Лого</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-md-12">
+          <!-- general form elements disabled -->
+          <div class="card card-info">
+            <div class="card-header">
+              <h3 class="card-title">Портфолио Лого</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <form method="post" action="/admin/portfolioLogo" enctype="multipart/form-data" id="frm-add-PortfolioLogo" class="frm-add-PortfolioLogo">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <!-- text input -->
+                    <div class="form-group">
+                      <label>Название</label>
+                      <input required type="text" class="form-control" placeholder="Название сайта" name="title">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <!-- text input -->
+                    <div class="form-group">
+                      <label>Описание - текст</label>
+                      <input required type="text" class="form-control" placeholder="Описание сайта" name="text">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Добавит картинку</label>
+                      <input required type="file" name="cover_image" class="form-control">  
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4">
+                      <div class="form-group">
+                        <label>Сылка на проект</label>
+                        <input type="text" required name="silka" class="form-control" placeholder="Ведите сылку">  
+                      </div>
+                  </div>
+                </div>
+                <button class="btn btn-dark" type="submit">Отправить</button>
+              </form>
+  
+            </div>
+            <!-- /.card-body -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+</div>
+
+<%- include('./partials/footer.ejs')  %> 

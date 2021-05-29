@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("./include/style.ejs") %> 
+    <title><%= title %></title>
+</head>
+<body>
+
+    <!--  ==========  HEADER _ START  ========== -->
+    <header class="header" id="header">
+        <div class="header___block">
+           <%- include("./include/top-nav.ejs") %> 
+            <div class="header__left">
+                <div class="col-lg-8 header__left_relative">
+                    <div class="header__left_img">
+                          <div class="header__left_block padding__all owl-carousel" >
+                              <div class="header__left_owl">
+                                    <h1 class="header__left_title">Разработка</h1>
+                                    <p class="header__left_text">сайтов под ключ</p>
+                                    <p class="header__left_text2">От готового решения до индивидуального проекта <br>
+                                    сайты компании • интернет-магазины • лендинги</p>
+                                    <button class="header__left_btn">Подробнее</button>
+                              </div>
+                              <div class="header__left_owl">
+                                    <h1 class="header__left_title">Брендбук</h1>
+                                    <p class="header__left_text">Разработка брендбук</p>
+                                    <p class="header__left_text2">Брендбуком в дизайнерской среде принято называть руководство <br> по использованию фирменного стиля.</p>
+                                    <button class="header__left_btn">Подробнее</button>
+                              </div>
+                              <div class="header__left_owl">
+                                    <h1 class="header__left_title">Логотип</h1>
+                                    <p class="header__left_text">Разработка Логотипов</p>
+                                    <p class="header__left_text2">Без логотипа вашей компании трудно сформировать <br> позитивный имидж в глазах потребителей и распространить его на другие товары</p>
+                                    <button class="header__left_btn">Подробнее</button>
+                              </div>
+                              <div class="header__left_owl">
+                                    <h1 class="header__left_title">Продвижение</h1>
+                                    <p class="header__left_text">Продвижение вашего бренда</p>
+                                    <p class="header__left_text2">Основная задача, которая стоит перед контекстной рекламой для продвижения бренда</p>
+                                    <button class="header__left_btn">Подробнее</button>
+                              </div>
+                          </div>  
+                    </div>
+                </div>
+                <div  class="col-lg-4 header__right d-none d-lg-block">
+                    <div id="header__paralaks" class="header__right_img"></div>
+                </div>
+            </div>
+        </div>
+    </header>

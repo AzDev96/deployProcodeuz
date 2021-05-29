@@ -1,0 +1,91 @@
+<%-  include('./partials/header.ejs') %> 
+<style>
+    .card-title{
+        color: white;
+        font-weight: 700;
+    }
+    .img_portf{
+      width: 100px;
+      height: 100px;
+    }
+    
+</style>
+
+  <!--  ==========   Портфолио   ========== -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Список Пользователя</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+                 <!--  ==========   Портфолио Сайта  ========== -->
+        <div class="col-md-12">
+          <!-- general form elements disabled -->
+          <div class="card card-blue">
+            <div class="card-header">
+              <h3 class="card-title">Список Пользователя</h3>
+            </div>
+            <div class="card-body">
+                <table id="tbl-list-portfolioSayt" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>#ID</th>
+                    <th>Имя</th>
+                    <th>Емаил</th>
+                    <th>Телефон номер</th>
+                    <th>Адресс</th>
+                  </tr>
+                  </thead>
+                  <tbody> 
+                    <% users.forEach(function(data) { %>
+                        <tr>
+                          <td>
+                            <%= data.id %>
+                          </td>
+                          <td>
+                            <%= data.name %>
+                          </td>
+                          <td>
+                            <%= data.email %>
+                          </td>
+                          <td>
+                            <%= data.mobile %>
+                          </td>
+                          <td>
+                            <%= data.adress %>
+                          </td>
+                          <td>
+                            <a href="/admin/edit-user/<%= data.id %>" class="btn btn-info">Редактировать</a>
+                            <a href="/admin/delete-user/<%= data.id %>" class="btn btn-danger">Удалить</a>
+                          </td>
+                        </tr>
+                    <% }) %> 
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <th>#ID</th>
+                    <th>Имя</th>
+                    <th>Емаил</th>
+                    <th>Телефон номер</th>
+                    <th>Адресс</th>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+</div>
+
+<%- include('./partials/footer.ejs')  %> 

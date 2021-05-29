@@ -1,0 +1,113 @@
+<%-  include('./partials/header.ejs') %> 
+<style>
+    .card-title{
+        color: white;
+        font-weight: 700;
+    }
+    .img_block{
+        width: 100%;
+        height: 200px;
+        border: 2px solid rgb(11, 129, 240);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .img_block p{
+        font-size: 25px;
+        color: rgb(11, 129, 240);
+        text-decoration: underline;
+        font-weight: 700;
+    }
+    .cover_image{
+        width: 150px;
+        height: 150px;
+    }
+    #frm-add-PortfolioLogo label.error{
+      background: red;
+      color: white;
+      margin-top: 10px;
+    }
+    #frm-add-PortfolioSayt label.error{
+      background: red;
+      color: white;
+      margin-top: 10px;
+    }
+    #frm-add-PortfolioBrend label.error{
+      background: red;
+      color: white;
+      margin-top: 10px;
+    }
+</style>
+
+  <!--  ==========   Портфолио Сайта  ========== -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Редактировать портфолио Сайта</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-md-12">
+          <!-- general form elements disabled -->
+          <div class="card card-info">
+            <div class="card-header">
+              <h3 class="card-title">Редактировать портфолио Сайта</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <form method="POST" action="/admin/edit-portfoliosayt/<%= sayt.id %>" enctype="multipart/form-data" id="frm-add-PortfolioSayt">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <!-- text input -->
+                        <div class="form-group">
+                        <label>Название</label>
+                        <input value="<%= sayt.title %>" required type="text" class="form-control" placeholder="Название сайта" name="title">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <!-- text input -->
+                        <div class="form-group">
+                        <label>Описание - текст</label>
+                        <input  value="<%= sayt.text %>" required type="text" class="form-control" placeholder="Описание сайта" name="text">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                        <label>Добавит картинку</label>
+                        <input type="file" name="cover_image"  class="form-control">  
+                        <br>
+                        <div class="img_block">
+                            <p>Картника</p>
+                            <img required class="cover_image" src="<%= sayt.cover_img %>" alt="png">
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                        <label>Сылка на проект</label>
+                        <input  value="<%= sayt.silka %>" type="text" required name="silka" class="form-control" placeholder="Ведите сылку">  
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-dark" type="submit">Отправить</button>
+              </form>
+  
+            </div>
+            <!-- /.card-body -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+</div>
+
+<%- include('./partials/footer.ejs')  %> 

@@ -1,0 +1,91 @@
+<%-  include('./partials/header.ejs') %> 
+<style>
+    .card-title{
+        color: white;
+        font-weight: 700;
+    }
+    #frm-add-PortfolioLogo label.error{
+      background: red;
+      color: white;
+      margin-top: 10px;
+    }
+    #frm-add-PortfolioSayt label.error{
+      background: red;
+      color: white;
+      margin-top: 10px;
+    }
+    #frm-add-PortfolioBrend label.error{
+      background: red;
+      color: white;
+      margin-top: 10px;
+    }
+</style>
+
+  <!--  ==========   Портфолио Сайта  ========== -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Добавить Пользователя</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-md-12">
+          <!-- general form elements disabled -->
+          <div class="card card-dark">
+            <div class="card-header">
+              <h3 class="card-title">Добавить Пользователя</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <form method="post" action="/admin/users-add" enctype="multipart/form-data" id="frm-add-PortfolioSayt">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <!-- text input -->
+                    <div class="form-group">
+                      <label>Имя Пользователя</label>
+                      <input required type="text" class="form-control" placeholder="Имя Пользователя" name="name">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <!-- text input -->
+                    <div class="form-group">
+                      <label>Емаил Пользователя</label>
+                      <input required type="email" class="form-control" placeholder="Емаил Пользователя" name="email">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Мобильный номер Пользователя</label>
+                      <input required type="text" name="mobile" class="form-control">  
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4">
+                      <div class="form-group">
+                        <label>Адресс пользовотеля</label>
+                        <input type="text" required name="adress" class="form-control" placeholder="Адресс пользовотеля">  
+                      </div>
+                  </div>
+                </div>
+                <button class="btn btn-dark" type="submit">Отправить</button>
+              </form>
+  
+            </div>
+            <!-- /.card-body -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+</div>
+
+<%- include('./partials/footer.ejs')  %> 

@@ -1,0 +1,77 @@
+<%-  include('./partials/header.ejs') %> 
+<style>
+    .card-title{
+        color: white;
+        font-weight: 700;
+    }
+    #frm-add-smm label.error{
+      background: red;
+      color: white;
+      margin-top: 10px;
+    }
+
+</style>
+<!-- ====================  НЕ ДОКОНЦА СДЕЛАН   ==============================-->
+  <!--  ==========   SMM Блок  ========== -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Добавить SMM блок</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-md-12">
+          <!-- general form elements disabled -->
+          <div class="card card-secondary">
+            <div class="card-header">
+              <h3 class="card-title">SММ Блок</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <form method="post" action="/admin/smm-add" enctype="multipart/form-data" id="frm-add-smm">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <!-- text input -->
+                    <div class="form-group">
+                      <label>Название</label>
+                      <input required type="text" class="form-control" placeholder="Название SMM бренда" name="title">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <!-- text input -->
+                    <div class="form-group">
+                      <label>Описание - текст</label>
+                      <input required type="text" class="form-control" placeholder="Описание смм" name="text">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>Сылка на проект</label>
+                            <input type="text" required name="silka" class="form-control" placeholder="Ведите сылку">  
+                        </div>
+                  </div>
+                </div>
+                </div>
+                </div>
+                <button class="btn btn-dark" type="submit">Отправить</button>
+              </form>
+  
+            </div>
+            <!-- /.card-body -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+
+</div>
+
+<%- include('./partials/footer.ejs')  %> 

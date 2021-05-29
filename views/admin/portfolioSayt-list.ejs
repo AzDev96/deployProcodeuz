@@ -1,0 +1,211 @@
+<%-  include('./partials/header.ejs') %> 
+<style>
+    .card-title{
+        color: white;
+        font-weight: 700;
+    }
+    .img_portf{
+      width: 100px;
+      height: 100px;
+    }
+    
+</style>
+
+  <!--  ==========   Портфолио   ========== -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Список Портфолио</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+                 <!--  ==========   Портфолио Сайта  ========== -->
+        <div class="col-md-12">
+          <!-- general form elements disabled -->
+          <div class="card card-blue">
+            <div class="card-header">
+              <h3 class="card-title">Список портфолио Сайта</h3>
+            </div>
+            <div class="card-body">
+                <table id="tbl-list-portfolioSayt" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>#ID</th>
+                    <th>Название</th>
+                    <th>Описание</th>
+                    <th>Картинка</th>
+                    <th>Сылка</th>
+                    <th>Действия</th>
+                  </tr>
+                  </thead>
+                  <tbody> 
+                    <% sayts.forEach(function(data) { %>
+                        <tr>
+                          <td>
+                            <%= data.id %>
+                          </td>
+                          <td>
+                            <%= data.title %>
+                          </td>
+                          <td>
+                            <%= data.text %>
+                          </td>
+                          <td>
+                            <img class="img_portf" src="<%= data.cover_img %>" alt="png">
+                          </td>
+                          <td>
+                            <%= data.silka %>
+                          </td>
+                          <td>
+                            <a href="/admin/edit-portfoliosayt/<%= data.id %>" class="btn btn-info">Редактировать</a>
+
+
+                            <a href="/admin/delete-sayt/<%= data.id %>" class="btn btn-danger">Удалить</a>
+                          </td>
+                        </tr>
+                    <% }) %> 
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <th>#ID</th>
+                    <th>Название</th>
+                    <th>Описание</th>
+                    <th>Картинка</th>
+                    <th>Сылка</th>
+                    <th>Действия</th>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+          </div>
+        </div>
+                 <!--  ==========   Портфолио Брендбук  ========== -->
+        <div class="col-md-12">
+          <!-- general form elements disabled -->
+          <div class="card card-orange">
+            <div class="card-header">
+              <h3 class="card-title">Список портфолио Брендбука</h3>
+            </div>
+            <div class="card-body">
+                <table id="tbl-list-portfolioBrend" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>#ID</th>
+                    <th>Название</th>
+                    <th>Описание</th>
+                    <th>Картинка</th>
+                    <th>Сылка</th>
+                    <th>Действия</th>
+                  </tr>
+                  </thead>
+                  <tbody> 
+                    <% brends.forEach(function(data) { %>
+                        <tr>
+                          <td>
+                            <%= data.id %>
+                          </td>
+                          <td>
+                            <%= data.title %>
+                          </td>
+                          <td>
+                            <%= data.text %>
+                          </td>
+                          <td>
+                            <img class="img_portf" src="<%= data.cover_img %>" alt="png">
+                          </td>
+                          <td>
+                            <%= data.silka %>
+                          </td>
+                          <td>
+                            <a href="/admin/edit-brendbuk/<%= data.id %>" class="btn btn-info">Редактировать</a>
+                            <a href="/admin/delete-brend/<%= data.id %>" class="btn btn-danger">Удалить</a>
+                          </td>
+                        </tr>
+                    <% }) %> 
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <th>#ID</th>
+                    <th>Название</th>
+                    <th>Описание</th>
+                    <th>Картинка</th>
+                    <th>Сылка</th>
+                    <th>Действия</th>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+          </div>
+        </div>
+                 <!--  ==========   Портфолио Лого  ========== -->
+        <div class="col-md-12">
+          <!-- general form elements disabled -->
+          <div class="card card-info">
+            <div class="card-header">
+              <h3 class="card-title">Список портфолио Лого</h3>
+            </div>
+            <div class="card-body">
+                <table id="tbl-list-portfolioLogo" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>#ID</th>
+                    <th>Название</th>
+                    <th>Описание</th>
+                    <th>Картинка</th>
+                    <th>Сылка</th>
+                    <th>Действия</th>
+                  </tr>
+                  </thead>
+                  <tbody> 
+                    <% logos.forEach(function(data) { %>
+                        <tr>
+                          <td>
+                            <%= data.id %>
+                          </td>
+                          <td>
+                            <%= data.title %>
+                          </td>
+                          <td>
+                            <%= data.text %>
+                          </td>
+                          <td>
+                            <img class="img_portf" src="<%= data.cover_img %>" alt="png">
+                          </td>
+                          <td>
+                            <%= data.silka %>
+                          </td>
+                          <td>
+                            <a href="/admin/edit-logo/<%= data.id %>" class="btn btn-info">Редактировать</a>
+                            <a href="/admin/delete-logo/<%= data.id %>"  class="btn btn-danger">  Удалить</a>
+                          </td>
+                        </tr>
+                    <% }) %> 
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <th>#ID</th>
+                    <th>Название</th>
+                    <th>Описание</th>
+                    <th>Картинка</th>
+                    <th>Сылка</th>
+                    <th>Действия</th>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+</div>
+
+<%- include('./partials/footer.ejs')  %> 
